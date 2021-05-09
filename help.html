@@ -28,6 +28,22 @@
         messages from the server</li>
       <li>/unban &lt;user&gt; (reason) - Unbans a user from the server</li>
       <li>/tempban &lt;user&gt; &lt;time&gt; &lt;unitsoftime&gt; (reason) - Temporarily bans a user from the server</li>
+      <li>/config - Use with no arguments for current config. Options for arguments listed below.</li>
+      <li>/cmdperms - &lt;command&gt; &lt;tier&gt; - Restricts the command usage to the specified permission levels. More info below.</li>
+      <li>/modrole - &lt;command&gt; &lt;tier&gt; - Gives this role the specified permission level. More info below.</li>
+      <li>/admin - &lt;args&gt; - No need to worry about this one. :)</li>
+    </ul>
+    <ul>
+      The permission levels can be assinged to command and allow management of who can use what commands. Perm 0 is default and just looks at basic server permissions and role hierarchy. 1 is the first level that can be assinged, while it can be granted custom access to commands, it isn't considered a moderator permission level by the bot. 2 and 3 are like 1, but are cosidered moderator levels. 4 is automatically assinged to administrators. 5 is automatically assinged to the owner. Scenerio: Someone with level 3 cannot ban someone with level 3 but can ban anyone with a lower level. Likewise anyone with a lower level of permission couldn't ban someone with level 3. Meaning the server owner can ban anyone that the bot can. Commands that have been restricted can be used by anyone with a level higher than or equal to the commands restriction level, meaning that administrators and the owner can always use any command.
+    </ul>
+    <ul>
+      Config basics
+      <li>Welcome Role - The role that will be assinged to users after they have lost the pending flag. (Meaning this works with membership screening!)</li>
+      <li>Welcome Message - The message that will be sent when a new member joins the server. (Assuming the welcome channel is set up.)</li>
+      <li>Welcome Channel - The channel that the welcome message will be sent to when a new member joins the server. (Assuming the welcome message is set up.)</li>
+      <li>Hide Owner - If the owner should be hidden from the userinfo and guildinfo commands. (Only can be used by the server owner.)</li>
+      <li>Hide Mod Actions - If moderation actions should appear in chat or only be posted in the audit log.</li>
+      <li>Reset - WARNING - This fully deletes all of your server's config from our database and resets it to default. As if you had just invited the bot. You must paste your server ID in the field to confirm. (Only can be used by the server owner.)</li>
     </ul>
   </body>
 </html>
