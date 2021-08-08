@@ -20,7 +20,7 @@
       <li>/slowmode &lt;time&gt; (channel) (reason) - Sets slowmode on a
         specified channel (Default current channel)</li>
       <li>/swslowmode &lt;time&gt; - Sets slowmode for the entire server
-        (requires manage server permission)</li>
+        (requires administrator permission)</li>
       <li>/kick &lt;user&gt; (reason) - Kicks a user from the server</li>
       <li>/ban &lt;user&gt; (reason) - Bans a user from the server and clears
         their last 7 days of messages</li>
@@ -37,9 +37,11 @@
         their last 7 days of messages, and then immedietly unbans them. Effectively a kick + clear messages.</li>
       <li>/recycle - (channel) - Deletes a channel and re-creates it to clear all messages.</li>
       <li>/support - Allows servers to enable or disable support mode to get support from Fubuki Support Staff.</li>
+      <li>/buttoncode - &lt;type&gt; &lt;role&gt; &lt;color&gt; &lt;title&gt; - Generates a code to make a role button.</li>
+      <li>/sendbuttonmsg - &lt;text&gt; &lt;button1&gt; (button2) (button3) (button4) (button5) - Sends a message containing a button.</li>
     </ul>
     <ul>
-      The permission levels can be assinged to command and allow management of who can use what commands. Perm 0 is default and just looks at basic server permissions and role hierarchy. 1 is the first level that can be assinged, while it can be granted custom access to commands, it isn't considered a moderator permission level by the bot. 2 and 3 are like 1, but are cosidered moderator levels. 4 is automatically assinged to administrators. 5 is automatically assinged to the owner. Scenerio: Someone with level 3 cannot ban someone with level 3 but can ban anyone with a lower level. Likewise anyone with a lower level of permission couldn't ban someone with level 3. Meaning the server owner can ban anyone that the bot can. Commands that have been restricted can be used by anyone with a level higher than or equal to the commands restriction level, meaning that administrators and the owner can always use any command.
+      The permission levels can be assinged to command and allow management of who can use what commands. Perm 0 is default and just looks at basic server permissions and role hierarchy. 1 is the first level that can be assinged, while it can be granted custom access to commands, it isn't considered a moderator permission level by the bot. 2 and 3 are like 1, but are cosidered moderator levels. 4 is automatically assinged to administrators. 5 is automatically assinged to the owner. Scenerio: Someone with level 3 cannot ban someone with level 3 but can ban anyone with a lower level. Likewise anyone with a lower level of permission couldn't ban someone with a level higher than theirs. Meaning the server owner can ban anyone that the bot can. Commands that have been restricted can be used by anyone with a level higher than or equal to the commands restriction level, meaning that administrators and the owner can always use any command.
     </ul>
     <ul>
       Config basics
@@ -48,7 +50,7 @@
       <li>Welcome Channel - The channel that the welcome message will be sent to when a new member joins the server. (Assuming the welcome message is set up.)</li>
       <li>Hide Owner - If the owner should be hidden from the userinfo and guildinfo commands. (Only can be used by the server owner.)</li>
       <li>Hide Mod Actions - If moderation actions should appear in chat or only be posted in the audit log.</li>
-      <li>Reset - WARNING - This fully deletes all of your server's config from our database and resets it to default. As if you had just invited the bot. You must paste your server ID in the field to confirm. (Only can be used by the server owner.)</li>
+      <li>Reset - WARNING - This fully deletes all of your server's config from the database and resets it to default. As if you had just invited the bot. You must paste your server ID in the field to confirm. (Only can be used by the server owner.)</li>
     </ul>
   </body>
 </html>
