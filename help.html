@@ -48,6 +48,8 @@
       <li>/support - Allows servers to enable or disable support mode to get support from Fubuki Support Staff.</li>
       <li>/buttoncode - &lt;type&gt; &lt;role&gt; &lt;color&gt; &lt;title&gt; - Generates a code to make a role button.</li>
       <li>/sendbuttonmsg - &lt;text&gt; &lt;button1&gt; (button2) (button3) (button4) (button5) - Sends a message containing a button.</li>
+      <li>/timeout - &lt;user&gt; &lt;time&gt; &lt;units&gt; (reason) - Prevents a user from sending messages, adding reactons, or joining voice channels. Up to 28 days.</li>
+      <li>/untimeout - &lt;user&gt; (reason) - Removes a user's timeout.</li>
     </ul>
     <ul>
       The permission levels can be assinged to command and allow management of who can use what commands. Perm 0 is default and just looks at basic server permissions and role hierarchy. 1 is the first level that can be assinged, while it can be granted custom access to commands, it isn't considered a moderator permission level by the bot. 2 and 3 are like 1, but are cosidered moderator levels. 4 is automatically assinged to administrators. 5 is automatically assinged to the owner. Scenerio: Someone with level 3 cannot ban someone with level 3 but can ban anyone with a lower level. Likewise anyone with a lower level of permission couldn't ban someone with a level higher than theirs. Meaning the server owner can ban anyone that the bot can. Commands that have been restricted can be used by anyone with a level higher than or equal to the commands restriction level, meaning that administrators and the owner can always use any command.
